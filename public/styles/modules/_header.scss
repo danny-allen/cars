@@ -20,7 +20,9 @@
 
     background-color: #4e5050;
     height: 70px;
+    line-height: 70px;
     width: 100%;
+    text-align: right;
 
     // -------------------------------------
     //   Elements
@@ -29,7 +31,11 @@
 
     // ----- Element description ----- // 
 
-    &__element {}
+    &__logo {
+        height: 30px;
+        width: auto;
+        margin-right: 12px;
+    }
 
 
     // -------------------------------------
