@@ -1,0 +1,8 @@
+node_modules
+app/bower_components
+.phalcon
+.DS_Store
+vendor
+app/config/config.php
+.tmp
+.sass-cache

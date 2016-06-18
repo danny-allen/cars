@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpunit/phpunit": "^5.4"
+    },
+    "scripts": {
+		"post-install-cmd": [
+			"bower install"
+		],
+		"post-update-cmd": [
+			"bower install"
+		]
+	}
+}
