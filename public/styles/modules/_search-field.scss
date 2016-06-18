@@ -1,0 +1,63 @@
+// *************************************
+//
+//   search-field
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.search-field {
+
+    // -------------------------------------
+    //   Variables
+    // -------------------------------------
+
+    $search-field-col-fg: #bababa;
+    $search-field-col-bg: #54595a;
+
+    padding: 6px 12px;
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+    &>input {
+    	width: 100%;
+    	padding-left: 40px;
+    	border: none;
+    	background-color: $search-field-col-bg;
+    	color: $search-field-col-fg;
+    	height: 40px;
+    	line-height: 40px;
+    	font-size: 14px;
+
+    	&:focus {
+    		background-color: #5c6162;
+    		outline: none;
+    		border: none;
+    	}
+    }
+
+    &>i {
+    	position: absolute;
+    	line-height: 40px;
+    	padding-left: 12px;
+    	font-size: 12px;
+    }
+
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    &--variation {}
+
+}

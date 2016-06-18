@@ -42,7 +42,10 @@
 	<div class="nav">
 		<span class="nav__label">Search</span>
 
-		<i class="fa fa-search" aria-hidden="true"></i>
+		<div class="search-field">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" value="Example..." />
+		</div>
 	</div>
 
 </header>
