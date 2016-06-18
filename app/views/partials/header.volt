@@ -1,5 +1,17 @@
 <header class="header">
 
+	<div class="avatar">
+		<div class="avatar__image">
+			<span>
+				<i class="fa fa-user" aria-hidden="true"></i>
+			</span>
+		</div>
+		<div class="avatar__text">
+			<div class="avatar__name">Guest</div>
+			<div class="avatar__status">Not logged in</div>
+		</div>
+	</div>
+
 	<nav class="nav">
 		<span class="nav__label">Navigation</span>
 		<ul class="nav__ul">

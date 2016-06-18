@@ -1,0 +1,76 @@
+// *************************************
+//
+//   avatar
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.avatar {
+
+    // -------------------------------------
+    //   Variables
+    // -------------------------------------
+
+    $avatar-col-bg: #878787;
+    $avatar-col-fg: #ffffff;
+
+    background-color: $avatar-col-bg;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 6px 12px;
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+    &__image {
+        &>span {
+            text-align: center;
+            line-height: 50px;
+            font-size: 40px;
+            color: $avatar-col-bg;
+            border-radius: 50%;
+            background-color: #c7c7c7;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__text {
+        padding-left: 12px; 
+    }
+
+    &__name {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    &__status {
+        font-size: 12px;
+    }
+
+    &__name,
+    &__status {
+        color: $avatar-col-fg;
+        width: 100%;
+    }
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    &--variation {}
+
+}
