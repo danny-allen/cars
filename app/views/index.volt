@@ -31,13 +31,13 @@
 
 </head>
 <body>
-    
-    {{ partial('partials/header') }}
+
+    {{ partial('partials/side-menu') }}
 
     <!-- wrapper -->
     <div class="wrapper">
+        {{ partial('partials/header') }}
 
-     
         <h1>The Title</h1>
 
         {{ content() }}
