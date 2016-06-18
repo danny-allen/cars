@@ -32,15 +32,16 @@
 </head>
 <body>
 
-    {{ partial('partials/side-menu') }}
 
     <!-- wrapper -->
     <div class="wrapper">
-        {{ partial('partials/header') }}
+        
+        {{ partial('partials/side-menu') }}
 
-        <h1>The Title</h1>
-
-        {{ content() }}
+        <main class="main">
+            {{ partial('partials/header') }}
+            {{ content() }}
+        </main>
 
     </div>
     <!-- /wrapper -->
