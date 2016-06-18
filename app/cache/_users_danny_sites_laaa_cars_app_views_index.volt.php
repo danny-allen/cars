@@ -18,17 +18,24 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+
     
+    <!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
+
     <!-- build:css /styles/main.css -->
     <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild -->
 
 </head>
 <body>
+    
+    <?php echo $this->partial('partials/header'); ?>
 
     <!-- wrapper -->
     <div class="wrapper">
 
+     
         <h1>The Title</h1>
 
         <?php echo $this->getContent(); ?>
@@ -50,12 +57,9 @@
 
     <!-- build:js /scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/public/bower_components/modernizr/modernizr.js"></script>
     <script src="/public/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/public/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/public/bower_components/jquery.cookie/jquery.cookie.js"></script>
-    <script src="/public/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/public/bower_components/foundation/js/foundation.js"></script>
+    <script src="/public/bower_components/what-input/what-input.js"></script>
+    <script src="/public/bower_components/foundation-sites/dist/foundation.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
