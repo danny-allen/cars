@@ -1,0 +1,86 @@
+// *************************************
+//
+//   Nav
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.nav {
+
+    // -------------------------------------
+    //   Variables
+    // -------------------------------------
+
+    $this: '.nav';
+    $nav-col-fg: #3B5998;
+    $nav-col-bg: #c0deed;
+
+    color: #b9b9b9;
+    font-size: 14px;
+
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+    //label above nav
+    &__label {
+        display: inline-block;
+        color: #fbfbfb;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 24px;
+        padding: 6px 12px;
+        font-family: 'Muli', sans-serif;
+        font-size: 12px;
+    }
+
+    //nav list
+    &__ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    //anchor
+    &__link {
+        color: #b9b9b9;
+        padding: 6px 12px;
+        width: 100%;
+        display: inline-block;
+
+        //icon
+        i { width: 20px; }
+    }
+
+    &__nested {
+        padding-left: 24px;
+        
+        #{$this}__link {
+            font-size: 12px;
+        }
+
+    }
+
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    #{$this}__link--selected {
+        background-color: #54595a;
+        color: #ffffff;
+        font-weight: bold;
+        border-left: 2px solid red;
+    }
+
+}
