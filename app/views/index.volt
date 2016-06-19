@@ -41,7 +41,9 @@
         <main class="main">
             {{ partial('partials/header') }}
             {{ content() }}
+            {{ partial('partials/footer') }}
         </main>
+        
 
     </div>
     <!-- /wrapper -->
