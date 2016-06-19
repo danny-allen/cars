@@ -1,8 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Controller;
-
-class BlogController extends Controller
+class BlogController extends AbstractController
 {
 
     public function indexAction()
