@@ -13,10 +13,9 @@ class CarsController extends AbstractController
         $numberPage = 1;
         $parameters["order"] = "rand()";
 
+        $cars = Cars::find($parameters);
 
-        $posts = Cars::find($parameters);
-
-        if (count($posts) == 0) {
+        if (count($cars) == 0) {
             $this->flash->notice("The search did not find any cars.");
 
             $this->dispatcher->forward(array(
@@ -28,13 +27,22 @@ class CarsController extends AbstractController
         }
 
         $paginator = new Paginator(array(
-            'data' => $posts,
+            'data' => $cars,
             'limit'=> 10,
             'page' => $numberPage
         ));
 
         $this->view->page = $paginator->getPaginate();
+    }
 
+    public function showAction($id)
+    {
+        $car = Cars::findFirst([
+            'id = :id:', 
+            'bind' => ['id' => $id]
+        ]);
+
+        $this->view->setVar('car', $car);
     }
 }
 
