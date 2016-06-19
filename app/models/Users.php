@@ -1,6 +1,7 @@
 <?php
 
 use \Phalcon\Mvc\Model;
+use \Phalcon\Mvc\Model\Validator\Uniqueness;
 
 class Users extends Model
 {
@@ -30,14 +31,6 @@ class Users extends Model
      */
     public function validation()
     {
-        $this->validate(
-            new Email(
-                [
-                    "field"   => "login",
-                    "message" => "The email is not valid"
-                ]
-            )
-        );
 
         $this->validate(
             new Uniqueness(
