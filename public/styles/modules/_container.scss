@@ -63,5 +63,10 @@
         border-left: 1px solid #bebebe;
         border-right: 1px solid #bebebe;
     }
+}
 
+//forced override for foundation grid floating last column left.
+column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+    float: left;
 }
