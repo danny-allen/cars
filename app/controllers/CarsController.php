@@ -45,15 +45,58 @@ class CarsController extends AbstractController
         $this->view->setVar('car', $car);
     }
 
-    public function makeAction($slug) {
+    /**
+     * searchAction
+     *
+     * Find cars based on query param and pass to view.
+     */
+    public function searchAction()
+    {
+        //get query parameter
+        $q = $this->request->getQuery('q');
+
+        //add query param to views
+        $this->view->search = $q;
+
+        //set persistance params
+        $this->persistent->parameters = null;
+
+        //set the page number
+        $numberPage = 1;
+
+        //query based on search
+        $cars = Cars::query()
+             ->innerJoin('Makes') //we want to search by make name too
+            ->where('name LIKE :bindparam:')
+            ->orWhere("model LIKE :bindparam:")
+            ->orWhere("colour LIKE :bindparam:")
+            ->orWhere("description LIKE :bindparam:")
+            ->bind( ['bindparam' => '%' . $q . '%'] )
+            ->limit(20)
+            ->execute();
+
+        //if nothing was found
+        if (count($cars) == 0) {
+            $this->flash->notice("The search did not find any cars.");
+        }
+
+        //paginate results
+        $paginator = new Paginator(array(
+            'data' => $cars,
+            'limit'=> 10,
+            'page' => $numberPage
+        ));
+        $this->view->page = $paginator->getPaginate();
+    }
+
+    public function makeAction($slug)
+    {
         
         $make = Makes::findFirst("slug = '" . $slug . "'");
 
         $this->view->make = $make;
 
         $this->persistent->parameters = null;
-
-        var_dump($make->id);
         
         $numberPage = 1;
 
