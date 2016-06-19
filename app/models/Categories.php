@@ -5,7 +5,7 @@ class Categories extends AbstractModel
 
     /**
      *
-     * @var integer
+     * @var int
      */
     public $id;
 
@@ -21,8 +21,11 @@ class Categories extends AbstractModel
      */
     public $slug;
 
+
     /**
-     * Initialize method for model.
+     * initialize
+     * 
+     * Define relationships with other tables
      */
     public function initialize()
     {
@@ -30,7 +33,10 @@ class Categories extends AbstractModel
         $this->hasMany('id', 'Posts', 'categories_id', NULL);
     }
 
+
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string
@@ -39,5 +45,4 @@ class Categories extends AbstractModel
     {
         return 'categories';
     }
-
 }

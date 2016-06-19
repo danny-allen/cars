@@ -23,6 +23,8 @@ class Makes extends AbstractModel
 
     
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string

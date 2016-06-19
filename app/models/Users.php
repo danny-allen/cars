@@ -7,7 +7,7 @@ class Users extends AbstractModel
 
     /**
      *
-     * @var integer
+     * @var int
      */
     public $id;
 
@@ -23,35 +23,42 @@ class Users extends AbstractModel
      */
     public $password;
 
+
     /**
-     * validate
+     * validation
+     *
+     * Validate the login
      * 
-     * @return [type] [description]
+     * @return boolean Whether the valiation failed or not
      */
     public function validation()
     {
 
+        //make sure the login name is unique
         $this->validate(
-            new Uniqueness(
-                [
-                    "field"   => "login",
-                    "message" => "The login must be unique"
-                ]
-            )
+            new Uniqueness([
+                "field"   => "login",
+                "message" => "The login must be unique"
+            ])
         );
-
         return $this->validationHasFailed() != true;
     }
 
+
     /**
-     * Initialize method for model.
+     * initialize
+     * 
+     * Identify db table relationships
      */
     public function initialize()
     {
         $this->hasMany('id', 'Posts', 'users_id', array('alias' => 'Posts'));
     }
 
+
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string

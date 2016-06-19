@@ -5,7 +5,7 @@ class Resources extends AbstractModel
 
     /**
      *
-     * @var integer
+     * @var int
      */
     public $id;
 
@@ -17,6 +17,8 @@ class Resources extends AbstractModel
 
     
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string

@@ -5,13 +5,13 @@ class Cars extends AbstractModel
 
     /**
      *
-     * @var integer
+     * @var int
      */
     public $id;
 
     /**
      *
-     * @var string
+     * @var int
      */
     public $make;
 
@@ -29,7 +29,7 @@ class Cars extends AbstractModel
 
     /**
      *
-     * @var string
+     * @var int (decimal)
      */
     public $price;
 
@@ -41,22 +41,26 @@ class Cars extends AbstractModel
 
     /**
      *
-     * @var string
+     * @var int
      */
     public $featured_image;
 
 
+    /**
+     * initialize
+     *
+     * Define relationships with other tables
+     */
     public function initialize()
     {
         $this->hasOne("featured_image", "resources", "id");
         $this->hasOne("make_id", "makes", "id");
     }
 
-    public static function findMakes() {
-        return self::find();
-    }
 
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string
@@ -66,20 +70,28 @@ class Cars extends AbstractModel
         return 'cars';
     }
 
+
     /**
      * getFormattedPrice
      *
-     * format the price to 2 decimal places
+     * Format the price to 2 decimal places
      * 
-     * @return string
+     * @return string Formatted price.
      */
     public function getFormattedPrice() {
-        return "£".number_format($this->price/100, 2, '.', ',');
+        return "£" . number_format($this->price/100, 2, '.', ',');
     }
 
+
+    /**
+     * getTitle
+     *
+     * Cars don't really have a title, but if they did, it would be the
+     * make and model
+     * 
+     * @return string Make and model concatenated.
+     */
     public function getTitle() {
         return $this->makes->name . " " . $this->model;
     }
-
-
 }

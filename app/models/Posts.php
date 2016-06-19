@@ -45,8 +45,11 @@ class Posts extends AbstractModel
      */
     public $categories_id;
 
+
     /**
-     * Initialize method for model.
+     * initialize
+     * 
+     * Identify table relationships
      */
     public function initialize()
     {
@@ -54,7 +57,10 @@ class Posts extends AbstractModel
         $this->belongsTo('categories_id', 'Categories', 'id', array('alias' => 'Categories'));
     }
 
+
     /**
+     * getSource
+     * 
      * Returns table name mapped in the model.
      *
      * @return string
