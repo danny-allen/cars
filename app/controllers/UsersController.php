@@ -1,7 +1,7 @@
 
 <?php
 
-class UsersController extends ControllerBase
+class UsersController extends AbstractController
 {
 
     public function indexAction()

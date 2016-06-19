@@ -1,11 +1,15 @@
 <?php
 
-class IndexController extends ControllerBase
+class IndexController extends AbstractController
 {
 
     public function indexAction()
     {
 
+    }
+
+    public function route404Action()
+    {
     }
 
 }

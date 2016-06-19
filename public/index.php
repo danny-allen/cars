@@ -22,6 +22,11 @@ try {
     include APP_PATH . "/app/config/services.php";
 
     /**
+     * Catch 404
+     */
+    include APP_PATH . "/app/config/404.php";
+
+    /**
      * Set routes
      */
     $di->set(

@@ -1,8 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Controller;
-
-class KnowledgebaseController extends Controller
+class KnowledgebaseController extends AbstractController
 {
 
     public function indexAction()
