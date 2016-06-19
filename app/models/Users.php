@@ -1,9 +1,8 @@
 <?php
 
-use \Phalcon\Mvc\Model;
 use \Phalcon\Mvc\Model\Validator\Uniqueness;
 
-class Users extends Model
+class Users extends AbstractModel
 {
 
     /**
@@ -61,27 +60,4 @@ class Users extends Model
     {
         return 'users';
     }
-
-    /**
-     * Allows to query a set of records that match the specified conditions
-     *
-     * @param mixed $parameters
-     * @return Users[]
-     */
-    public static function find($parameters = null)
-    {
-        return parent::find($parameters);
-    }
-
-    /**
-     * Allows to query the first record that match the specified conditions
-     *
-     * @param mixed $parameters
-     * @return Users
-     */
-    public static function findFirst($parameters = null)
-    {
-        return parent::findFirst($parameters);
-    }
-
 }
