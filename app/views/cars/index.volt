@@ -13,7 +13,7 @@
                 <div class="card__text">
                     <h2 class="card__title"><?php echo $car->make ?> <?php echo $car->model ?></h2>
                     <hr />
-                    <?php echo $car->price ?>
+                    <?php echo $car->getFormattedPrice(); ?>
                 </div>
             </a>
           </div>

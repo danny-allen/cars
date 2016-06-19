@@ -43,5 +43,16 @@ class Cars extends AbstractModel
         return 'cars';
     }
 
+    /**
+     * getFormattedPrice
+     *
+     * format the price to 2 decimal places
+     * 
+     * @return string
+     */
+    public function getFormattedPrice() {
+        return "£".number_format($this->price/100, 2, '.', ',');
+    }
+
 
 }
