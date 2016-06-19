@@ -1,0 +1,13 @@
+
+<div class="container container--white container--border-side">
+	<?php echo $this->tag->linkTo(array("blog", "< Back to Blog")) ?>
+    <div class="page-header">
+        <h1><?php echo $post->title; ?></h1>
+    </div>
+</div>
+
+<div class="container container--wide">
+	<div class="container">
+		<?php echo $post->content; ?>
+	</div>
+</div>
