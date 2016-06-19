@@ -22,6 +22,16 @@ try {
     include APP_PATH . "/app/config/services.php";
 
     /**
+     * Set routes
+     */
+    $di->set(
+        'router',
+        function(){
+            return include(__DIR__."/../app/config/routes.php");
+        }
+    );
+
+    /**
      * Handle the request
      */
     $application = new \Phalcon\Mvc\Application($di);
