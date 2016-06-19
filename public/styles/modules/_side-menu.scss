@@ -15,10 +15,20 @@
     // -------------------------------------
 
     background-color: #4e5050;
-    width: 220px;
-    height: 100%;
     flex-grow: 0;
     flex-shrink: 0;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    display: none;
+
+    @media screen and (min-width: 40em) {
+        display: block;
+        width: 220px;
+        height: 100%;
+        top: 0;
+        position: fixed;
+    }
 
     // -------------------------------------
     //   Elements

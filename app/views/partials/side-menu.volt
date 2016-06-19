@@ -1,6 +1,6 @@
 <?php $uri = $this->router->getRewriteUri(); ?>
 
-<div class="side-menu">
+<div class="side-menu" ui-side-menu>
 
 	<div class="avatar">
 		<div class="avatar__image">
