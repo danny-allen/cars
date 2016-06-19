@@ -2,12 +2,16 @@
 
 $router = new Phalcon\Mvc\Router();
 
-$router->add(
-    '/login',
-    [
-        'controller' => 'users',
-        'action'     => 'login',
-    ]
-);
+//login
+$router->add('/login', [
+    'controller' => 'users',
+    'action'     => 'login',
+]);
+
+//register
+$router->add('/register', [
+    'controller' => 'users',
+    'action'     => 'register',
+]);
 
 return $router;
