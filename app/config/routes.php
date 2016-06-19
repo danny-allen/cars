@@ -39,4 +39,11 @@ $router->add("/products/id/{id}", [
     "action"     => "show",
 ]);
 
+//product make page
+$router->add("/products/make/{slug}", [
+    "controller" => "cars",
+    "action"     => "make",
+    "slug"       => 2
+]);
+
 return $router;
