@@ -4,12 +4,18 @@
 class UsersController extends AbstractController
 {
 
+	/**
+	 * indexAction
+	 */
     public function indexAction()
     {
 
     }
 
+
     /**
+     * loginAction
+     * 
      * Displays the login
      */
     public function loginAction()
@@ -17,23 +23,35 @@ class UsersController extends AbstractController
 
 	}
 
+
+	/**
+	 * registerAction
+	 *
+	 * Resgisters a user
+	 */
 	public function registerAction()
 	{
+		//create a new user
         $user = new Users();
 
+        //get login and password from post vars
         $login    = $this->request->getPost('login');
         $password = $this->request->getPost('password');
 
+        //set the user login
         $user->login = $login;
 
-        // Store the password hashed
+        //set the password, but hash it
         $user->password = $this->security->hash($password);
 
+        //save the user
         $user->save();
 	}
 
 
 	/**
+	 * authAction
+	 * 
 	 * Authenticates a user
 	 */
 	public function authAction()
@@ -82,8 +100,5 @@ class UsersController extends AbstractController
 	        return false;
 	    }
 	}
-
-
-
 }
 
