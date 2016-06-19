@@ -49,6 +49,11 @@ class Cars extends AbstractModel
     public function initialize()
     {
         $this->hasOne("featured_image", "resources", "id");
+        $this->hasOne("make_id", "makes", "id");
+    }
+
+    public static function findMakes() {
+        return self::find();
     }
 
     /**
@@ -73,7 +78,7 @@ class Cars extends AbstractModel
     }
 
     public function getTitle() {
-        return $this->make . " " . $this->model;
+        return $this->makes->name . " " . $this->model;
     }
 
 

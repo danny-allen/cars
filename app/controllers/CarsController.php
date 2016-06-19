@@ -44,5 +44,40 @@ class CarsController extends AbstractController
 
         $this->view->setVar('car', $car);
     }
+
+    public function makeAction($slug) {
+        
+        $make = Makes::findFirst("slug = '" . $slug . "'");
+
+        $this->view->make = $make;
+
+        $this->persistent->parameters = null;
+
+        var_dump($make->id);
+        
+        $numberPage = 1;
+
+        $cars = Cars::find("make_id = '" . $make->id . "'");
+
+        if (count($cars) == 0) {
+            $this->flash->notice("The search did not find any cars.");
+
+            $this->dispatcher->forward(array(
+                "controller" => "cars",
+                "action" => "make"
+            ));
+
+            return;
+        }
+
+        $paginator = new Paginator(array(
+            'data' => $cars,
+            'limit'=> 10,
+            'page' => $numberPage
+        ));
+
+        $this->view->page = $paginator->getPaginate();
+
+    }
 }
 

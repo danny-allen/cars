@@ -22,15 +22,13 @@
 			<li>
 				<a class="nav__link<?php echo ($uri === '/products')? ' nav__link--selected' : ''; ?>" href="/products"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Products</a>
 				<ul class="nav__ul nav__nested">
-					<li>
-						<a class="nav__link" href="#">Example Sub Item</a>
-					</li>
-					<li>
-						<a class="nav__link" href="#">Example Sub Item</a>
-					</li>
-					<li>
-						<a class="nav__link" href="#">Example Sub Item</a>
-					</li>
+
+					<?php $makes = Makes::find(); ?>
+					<?php foreach ($makes as $make): ?>
+						<li>
+							<a class="nav__link" href="/products/make/<?php echo $make->slug; ?>"><?php echo $make->name; ?></a>
+						</li>
+					<?php endforeach; ?>
 				</ul>
 			</li>
 			<li>

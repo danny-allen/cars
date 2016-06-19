@@ -11,7 +11,7 @@
             <a class="card" href="/products/id/<?php echo $car->id ?>">
                 <img src="<?php echo $car->resources->path; ?>" alt="<?php echo $car->make ?>" />
                 <div class="card__text">
-                    <h2 class="card__title"><?php echo $car->make ?> <?php echo $car->model ?></h2>
+                    <h2 class="card__title"><?php echo $car->getTitle(); ?></h2>
                     <hr />
                     <?php echo $car->getFormattedPrice(); ?>
                 </div>
