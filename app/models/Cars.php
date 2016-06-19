@@ -45,5 +45,16 @@ class Cars extends Model
         return 'cars';
     }
 
+    /**
+     * Allows to query a set of records that match the specified conditions
+     *
+     * @param mixed $parameters
+     * @return Cars[]
+     */
+    public static function find($parameters = null)
+    {
+        return parent::find($parameters);
+    }
+
 
 }
