@@ -14,6 +14,7 @@
     //   Variables
     // -------------------------------------
 
+    $this: '.avatar';
     $avatar-col-bg: #878787;
     $avatar-col-fg: #ffffff;
 
@@ -23,6 +24,19 @@
     align-items: center;
     height: 70px;
     padding: 6px 12px;
+    overflow: hidden;
+
+    &:hover {
+        #{$this}__circle{
+            transition: all 0.2s ease-in;
+            transform: scale(9, 9);
+        }
+        #{$this}__name,
+        #{$this}__status {
+            transition: all 0.2s ease-in;
+            color: $avatar-col-bg;
+        }
+    }
 
     // -------------------------------------
     //   Elements
@@ -32,20 +46,40 @@
     // ----- Element description ----- // 
 
     &__image {
-        &>span {
-            text-align: center;
-            line-height: 50px;
-            font-size: 40px;
-            color: $avatar-col-bg;
-            border-radius: 50%;
-            background-color: #c7c7c7;
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-        }
+        text-align: center;
+        line-height: 50px;
+        font-size: 40px;
+        color: $avatar-col-bg;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+         &>i {
+            position: relative;
+            z-index: 2;
+         }
+    }
+
+    &__circle {
+        text-align: center;
+        line-height: 50px;
+        font-size: 40px;
+        color: $avatar-col-bg;
+        border-radius: 50%;
+        background-color: #c7c7c7;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        transition: all 0.2s ease-in;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: scale(1, 1);
     }
 
     &__text {
+        position: relative;
+        z-index: 2;
         padding-left: 12px; 
     }
 
@@ -61,6 +95,7 @@
     &__name,
     &__status {
         color: $avatar-col-fg;
+        transition: all 0.2s ease-in;
         width: 100%;
     }
 

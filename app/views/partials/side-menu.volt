@@ -2,17 +2,16 @@
 
 <div class="side-menu" ui-side-menu>
 
-	<div class="avatar">
+	<a class="avatar" href="/login">
 		<div class="avatar__image">
-			<span>
-				<i class="fa fa-user" aria-hidden="true"></i>
-			</span>
+			<span class="avatar__circle"></span>
+			<i class="fa fa-user" aria-hidden="true"></i>
 		</div>
 		<div class="avatar__text">
 			<div class="avatar__name">Guest</div>
 			<div class="avatar__status">Not logged in</div>
 		</div>
-	</div>
+	</a>
 
 	<nav class="nav">
 		<span class="nav__label">Navigation</span>
