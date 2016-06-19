@@ -59,12 +59,15 @@
 	</div>
 
 	<div class="nav">
-		<span class="nav__label">Search</span>
+		<span class="nav__label">Search Products</span>
 
-		<div class="search-field">
-			<i class="fa fa-search" aria-hidden="true"></i>
-			<input type="text" value="Example..." />
-		</div>
+			{{ form("products/search", "method": "get") }}
+				<div class="search-field">
+					<i class="fa fa-search" aria-hidden="true"></i>
+			
+					<input type="text" id="q" name="q" placeholder="Search..." value="<?php echo $this->request->getQuery('q') ?>" />
+				</div>
+			{{ end_form() }}
 	</div>
 
 </div>
