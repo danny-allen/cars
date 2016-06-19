@@ -14,4 +14,10 @@ $router->add('/register', [
     'action'     => 'register',
 ]);
 
+//blog posts
+$router->add('/blog', [
+    'controller' => 'posts',
+    'action'     => 'index',
+]);
+
 return $router;
