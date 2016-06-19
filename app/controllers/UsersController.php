@@ -17,37 +17,44 @@ class UsersController extends ControllerBase
 
 	}
 
+	public function registerAction()
+	{
+        $user = new Users();
+
+        $login    = $this->request->getPost('login');
+        $password = $this->request->getPost('password');
+
+        $user->login = $login;
+
+        // Store the password hashed
+        $user->password = $this->security->hash($password);
+
+        $user->save();
+	}
+
 
 	/**
 	 * Authenticates a user
 	 */
 	public function authAction()
 	{
-	    if ($this->request->isPost()) {
-	    	$user = Users::findFirst([
-	            'login = :login: and password = :password:', 
-	            'bind' => [
-	                'login'    => $this->request->getPost("login", "email"),
-	                'password' => sha1($this->request->getPost("password"))
-	            ]
-	        ]);
 
-		    if ($user === false) {
-		        $this->flash->error("Incorrect credentials");
-		        return $this->dispatcher->forward([
-	                'controller' => 'index',
-	                'action'     => 'index',
-		        ]);
-		    }
+        $login    = $this->request->getPost('login');
+        $password = $this->request->getPost('password');
 
-		    $this->session->set('auth', $user->id);
-		    $this->flash->success("You've been successfully logged in");
+        $this->view->disable();
 
-		    return $this->dispatcher->forward([
-	            'controller' => 'posts',
-	            'action'     => 'index',
-	        ]);
-	    }
+        $user = Users::findFirstByLogin($login);
+        if ($user) {
+            if ($this->security->checkHash($password, $user->password)) {
+
+		    	$this->flash->success("You've been successfully logged in");
+            }
+        } else {
+            // To protect against timing attacks. Regardless of whether a user exists or not, the script will take roughly the same amount as it will always be computing a hash.
+            $this->security->hash(rand());
+		    $this->flash->error("Incorrect credentials");
+        }
 	}
 
 
