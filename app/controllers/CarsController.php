@@ -11,11 +11,11 @@ class CarsController extends AbstractController
         $this->persistent->parameters = null;
         
         $numberPage = 1;
-        $parameters["order"] = "id";
+        $parameters["order"] = "rand()";
 
 
         $posts = Cars::find($parameters);
-        
+
         if (count($posts) == 0) {
             $this->flash->notice("The search did not find any cars.");
 
