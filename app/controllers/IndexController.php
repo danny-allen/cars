@@ -8,5 +8,9 @@ class IndexController extends AbstractController
 
     }
 
+    public function route404Action()
+    {
+    }
+
 }
 
