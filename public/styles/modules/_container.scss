@@ -1,0 +1,67 @@
+// *************************************
+//
+//   container
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.container {
+
+    // -------------------------------------
+    //   Variables
+    // -------------------------------------
+
+    $container-var:    7em;
+    $container-col-fg: #3B5998;
+    $container-col-bg: #c0deed;
+
+    max-width: 1000px;
+    margin: auto;
+    padding: 12px;
+
+
+    @media screen and (min-width: 40em) {
+        padding: 24px 48px;
+    }
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+
+    &>.container {
+        padding: 0;
+    }
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    &--wide {
+        max-width: 100vw;
+        margin-left:0;
+        margin-right: 0;
+        border-top: 1px solid #bebebe;
+        border-bottom: 1px solid #bebebe;
+        border-left: none;
+        border-right: none;
+        background-color: #fbfbfb;
+    }
+
+    &--white { background-color: #ffffff; }
+
+    &--border-side {
+        border-left: 1px solid #bebebe;
+        border-right: 1px solid #bebebe;
+    }
+
+}
