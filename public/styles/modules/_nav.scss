@@ -15,8 +15,6 @@
     // -------------------------------------
 
     $this: '.nav';
-    $nav-col-fg: #3B5998;
-    $nav-col-bg: #c0deed;
 
     color: #b9b9b9;
     font-size: 14px;
@@ -25,9 +23,6 @@
     // -------------------------------------
     //   Elements
     // -------------------------------------
-
-
-    // ----- Element description ----- // 
 
     //label above nav
     &__label {
@@ -62,19 +57,13 @@
     &__nested {
         padding-left: 24px;
         
-        #{$this}__link {
-            font-size: 12px;
-        }
-
+        #{$this}__link { font-size: 12px; }
     }
 
 
     // -------------------------------------
     //   Variations
     // -------------------------------------
-
-
-    // ----- Variation description ----- // 
 
     #{$this}__link--selected {
         background-color: #54595a;

@@ -42,9 +42,6 @@
     //   Elements
     // -------------------------------------
 
-
-    // ----- Element description ----- // 
-
     &__image {
         text-align: center;
         line-height: 50px;
@@ -88,9 +85,7 @@
         line-height: 18px;
     }
 
-    &__status {
-        font-size: 12px;
-    }
+    &__status { font-size: 12px; }
 
     &__name,
     &__status {
@@ -98,14 +93,5 @@
         transition: all 0.2s ease-in;
         width: 100%;
     }
-
-    // -------------------------------------
-    //   Variations
-    // -------------------------------------
-
-
-    // ----- Variation description ----- // 
-
-    &--variation {}
 
 }

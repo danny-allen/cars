@@ -10,14 +10,6 @@
 
 .container {
 
-    // -------------------------------------
-    //   Variables
-    // -------------------------------------
-
-    $container-var:    7em;
-    $container-col-fg: #3B5998;
-    $container-col-bg: #c0deed;
-
     max-width: 1000px;
     margin: auto;
     padding: 12px;
@@ -31,10 +23,6 @@
     //   Elements
     // -------------------------------------
 
-
-    // ----- Element description ----- // 
-
-
     &>.container {
         padding: 0;
     }
@@ -42,9 +30,6 @@
     // -------------------------------------
     //   Variations
     // -------------------------------------
-
-
-    // ----- Variation description ----- // 
 
     &--wide {
         max-width: 100vw;
@@ -64,9 +49,7 @@
         border-right: 1px solid #bebebe;
     }
 
-    &--end {
-        border-bottom: 1px solid #bebebe;
-    }
+    &--end { border-bottom: 1px solid #bebebe; }
 }
 
 //forced override for foundation grid floating last column right.

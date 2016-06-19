@@ -10,14 +10,6 @@
 
 .card {
 
-    // -------------------------------------
-    //   Variables
-    // -------------------------------------
-
-    $card-var:    7em;
-    $card-col-fg: #3B5998;
-    $card-col-bg: #c0deed;
-
     background-color: #ffffff;
     display: inline-block;
     margin: 12px 0;
@@ -34,9 +26,6 @@
     //   Elements
     // -------------------------------------
 
-
-    // ----- Element description ----- // 
-
     &__title {
         display: inline-block;
         color: #b7b3b5;
@@ -51,18 +40,6 @@
     &__text {
         padding: 0 12px 12px 12px;
 
-        &>hr {
-            margin: 6px 0;
-        }
+        &>hr { margin: 6px 0; }
     }
-
-    // -------------------------------------
-    //   Variations
-    // -------------------------------------
-
-
-    // ----- Variation description ----- // 
-
-    &--variation {}
-
 }

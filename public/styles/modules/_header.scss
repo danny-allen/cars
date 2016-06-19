@@ -10,14 +10,6 @@
 
 .header {
 
-    // -------------------------------------
-    //   Variables
-    // -------------------------------------
-
-    $header-var:    7em;
-    $header-col-fg: #3B5998;
-    $header-col-bg: #c0deed;
-
     background-color: #4e5050;
     height: 70px;
     line-height: 70px;
@@ -28,9 +20,6 @@
     // -------------------------------------
     //   Elements
     // -------------------------------------
-
-
-    // ----- Element description ----- // 
 
     &__logo {
         height: 30px;
@@ -53,15 +42,4 @@
             display: none;
         }
     }
-
-
-    // -------------------------------------
-    //   Variations
-    // -------------------------------------
-
-
-    // ----- Variation description ----- // 
-
-    &--variation {}
-
 }
