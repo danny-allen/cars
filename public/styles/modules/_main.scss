@@ -19,7 +19,11 @@
     $main-col-bg: #c0deed;
 
     width: 100%;
-
+    margin-left: 0;
+    
+    @media screen and (min-width: 40em) {
+        margin-left: 220px;
+    }
     // -------------------------------------
     //   Elements
     // -------------------------------------
