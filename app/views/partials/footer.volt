@@ -1,3 +1,3 @@
 <div class="container container--white container--border-side container--end">
-    Cars
+    <p>&copy; <?php echo Date('Y'); ?> Cars, all rights reserved.</p>
 </div>
