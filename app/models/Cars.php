@@ -35,5 +35,15 @@ class Cars extends Model
      */
     public $price;
 
+    /**
+     * Returns table name mapped in the model.
+     *
+     * @return string
+     */
+    public function getSource()
+    {
+        return 'cars';
+    }
+
 
 }
