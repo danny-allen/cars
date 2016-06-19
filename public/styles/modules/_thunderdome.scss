@@ -1,0 +1,32 @@
+// *************************************
+//
+//   thunderdome
+//   To identify user editable regions - anything goes.
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.thunderdome {
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+    &__image {
+
+    	margin-bottom: 12px;
+
+		/* Large and up */
+		@media screen and (min-width: 64em) {
+			width: 270px;
+			float: left;
+			margin: 6px 12px 0 0;
+		}
+	}
+}
