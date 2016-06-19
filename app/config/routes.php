@@ -20,4 +20,11 @@ $router->add('/blog', [
     'action'     => 'index',
 ]);
 
+//single post page
+$router->add("/blog/([a-z\-]+)", [
+	"controller" => "posts",
+	"action"     => "show",
+	"title"      => 1
+]);
+
 return $router;
