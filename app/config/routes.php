@@ -29,8 +29,14 @@ $router->add("/blog/([a-z\-]+)", [
 
 //single post page
 $router->add("/products", [
-	"controller" => "cars",
-	"action"     => "index",
+    "controller" => "cars",
+    "action"     => "index",
+]);
+
+//single post page
+$router->add("/products/id/{id}", [
+    "controller" => "cars",
+    "action"     => "show",
 ]);
 
 return $router;
