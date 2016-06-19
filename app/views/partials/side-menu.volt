@@ -20,7 +20,7 @@
 				<a class="nav__link<?php echo ($uri === '/')? ' nav__link--selected' : ''; ?>" href="/"><i class="fa fa-home" aria-hidden="true"></i> Homepage</a>
 			</li>
 			<li>
-				<a class="nav__link<?php echo ($uri === '/cars')? ' nav__link--selected' : ''; ?>" href="/cars"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Products</a>
+				<a class="nav__link<?php echo ($uri === '/products')? ' nav__link--selected' : ''; ?>" href="/products"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Products</a>
 				<ul class="nav__ul nav__nested">
 					<li>
 						<a class="nav__link" href="#">Example Sub Item</a>
