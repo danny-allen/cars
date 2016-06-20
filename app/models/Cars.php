@@ -53,8 +53,8 @@ class Cars extends AbstractModel
      */
     public function initialize()
     {
-        $this->hasOne("featured_image", "resources", "id");
-        $this->hasOne("make_id", "makes", "id");
+        $this->hasOne("featured_image", "Resources", "id");
+        $this->hasOne("make_id", "Makes", "id");
     }
 
 
