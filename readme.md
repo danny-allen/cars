@@ -116,7 +116,6 @@ Usually there would be a build task that would compile, compress and minify all 
 * Blog create/edit/delete started as attempt to learn Phalcon - not complete/tested.
 
 
-
 ---
 
 
@@ -169,9 +168,7 @@ The style of CSS I try to work with is BEM. There were conflicting CSS declarati
 * Sunday
 	+ 9:30 - 13:00
 	+ 13:30 - 20:45
-	+ 21:30 - 3:00(am)
-
-TOTAL: Hours 29.30
+	+ 21:30 - 3:15(am)
 
 I hope that my hours and potential to become more skilled in these frameworks is recognised. I’ve been very open about the time spent on this assignment, and I’m more than willing to put this same effort into bringing my skills in line with the rest of the team.
 
