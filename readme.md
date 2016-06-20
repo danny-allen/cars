@@ -173,10 +173,11 @@ The style of CSS I try to work with is BEM. There were conflicting CSS declarati
 I hope that my hours and potential to become more skilled in these frameworks is recognised. I’ve been very open about the time spent on this assignment, and I’m more than willing to put this same effort into bringing my skills in line with the rest of the team.
 
 
+---
+
+
 ## Going forward
 
-My next phalcon project, will see me paying more attention to checking of data types and ranges. Primarily, what goes into a method and what comes out. This is where PHPUnit comes in useful.
-
-One thing, that would improve on the next project working with these development tools is my workflow. Getting to grips with the frameworks allows me to see the bigger picture before starting. 
+My next phalcon project, will see me paying more attention to checking of data types and ranges. Primarily, what goes into a method and what comes out. This is where PHPUnit comes in useful. My workflow will also improve since, getting to grips with the frameworks allows me to see the bigger picture before starting.
 
 
