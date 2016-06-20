@@ -58,32 +58,32 @@ Now run composer, once this has been done, it will automatically run `bower inst
 
 Make a config file in the directory `cars/app/config/config.php` that looks like:
 
-	```
-		<?php
+```
+	<?php
 
-		defined('APP_PATH') || define('APP_PATH', realpath('.'));
+	defined('APP_PATH') || define('APP_PATH', realpath('.'));
 
-		return new \Phalcon\Config(array(
-		    'database' => array(
-		        'adapter'     => 'Mysql',
-		        'host'        => 'yourhost',
-		        'username'    => 'yourusername',
-		        'password'    => 'yourpassword',
-		        'dbname'      => 'cars',
-		        'charset'     => 'utf8',
-		    ),
-		    'application' => array(
-		        'controllersDir' => APP_PATH . '/app/controllers/',
-		        'modelsDir'      => APP_PATH . '/app/models/',
-		        'migrationsDir'  => APP_PATH . '/app/migrations/',
-		        'viewsDir'       => APP_PATH . '/app/views/',
-		        'pluginsDir'     => APP_PATH . '/app/plugins/',
-		        'libraryDir'     => APP_PATH . '/app/library/',
-		        'cacheDir'       => APP_PATH . '/app/cache/',
-		        'baseUri'        => '/',
-		    )
-		));
-	```
+	return new \Phalcon\Config(array(
+	    'database' => array(
+	        'adapter'     => 'Mysql',
+	        'host'        => 'yourhost',
+	        'username'    => 'yourusername',
+	        'password'    => 'yourpassword',
+	        'dbname'      => 'cars',
+	        'charset'     => 'utf8',
+	    ),
+	    'application' => array(
+	        'controllersDir' => APP_PATH . '/app/controllers/',
+	        'modelsDir'      => APP_PATH . '/app/models/',
+	        'migrationsDir'  => APP_PATH . '/app/migrations/',
+	        'viewsDir'       => APP_PATH . '/app/views/',
+	        'pluginsDir'     => APP_PATH . '/app/plugins/',
+	        'libraryDir'     => APP_PATH . '/app/library/',
+	        'cacheDir'       => APP_PATH . '/app/cache/',
+	        'baseUri'        => '/',
+	    )
+	));
+```
 
 Lastly you will need to run the following to create the stylesheet:
 
