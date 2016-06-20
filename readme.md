@@ -46,7 +46,9 @@ Please visit cars.noise-maker.co.uk for the deployed version of this work.
 
 Clone the repository with the following:
 
-```mkdir cars && git clone https://github.com/danny-allen/cars.git .```
+```sh
+mkdir cars && git clone https://github.com/danny-allen/cars.git .
+```
 
 Run npm:
 
@@ -63,7 +65,7 @@ composer install
 Make a config file in the directory `cars/app/config/config.php` that looks like:
 
 ```php
-	<?php
+<?php
 
 	defined('APP_PATH') || define('APP_PATH', realpath('.'));
 
@@ -87,12 +89,14 @@ Make a config file in the directory `cars/app/config/config.php` that looks like
 	        'baseUri'        => '/',
 	    )
 	));
-	?>
+?>
 ```
 
 Lastly you will need to run the following to create the stylesheet:
 
-```gulp watch```
+```sh
+gulp watch
+```
 
 Usually there would be a build task that would compile, compress and minify all the assets, but I've not got that far with the project structure for this setup.
 
