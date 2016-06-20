@@ -50,15 +50,19 @@ Clone the repository with the following:
 
 Run npm:
 
-```sudo npm install```
+```sh
+sudo npm install
+```
 
 Now run composer, once this has been done, it will automatically run `bower install`:
 
-```composer install```
+```sh
+composer install
+```
 
 Make a config file in the directory `cars/app/config/config.php` that looks like:
 
-```
+```php
 	<?php
 
 	defined('APP_PATH') || define('APP_PATH', realpath('.'));
@@ -83,6 +87,7 @@ Make a config file in the directory `cars/app/config/config.php` that looks like
 	        'baseUri'        => '/',
 	    )
 	));
+	?>
 ```
 
 Lastly you will need to run the following to create the stylesheet:
