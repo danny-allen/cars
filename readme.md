@@ -50,45 +50,46 @@ Clone the repository with the following:
 
 Run npm:
 
-	```sudo npm install```
+```sudo npm install```
 
 Now run composer, once this has been done, it will automatically run `bower install`:
 
-	```composer install```
+```composer install```
 
 Make a config file in the directory `cars/app/config/config.php` that looks like:
 
-	```<?php
+	```
+		<?php
 
-	defined('APP_PATH') || define('APP_PATH', realpath('.'));
+		defined('APP_PATH') || define('APP_PATH', realpath('.'));
 
-	return new \Phalcon\Config(array(
-	    'database' => array(
-	        'adapter'     => 'Mysql',
-	        'host'        => 'yourhost',
-	        'username'    => 'yourusername',
-	        'password'    => 'yourpassword',
-	        'dbname'      => 'cars',
-	        'charset'     => 'utf8',
-	    ),
-	    'application' => array(
-	        'controllersDir' => APP_PATH . '/app/controllers/',
-	        'modelsDir'      => APP_PATH . '/app/models/',
-	        'migrationsDir'  => APP_PATH . '/app/migrations/',
-	        'viewsDir'       => APP_PATH . '/app/views/',
-	        'pluginsDir'     => APP_PATH . '/app/plugins/',
-	        'libraryDir'     => APP_PATH . '/app/library/',
-	        'cacheDir'       => APP_PATH . '/app/cache/',
-	        'baseUri'        => '/',
-	    )
-	));
+		return new \Phalcon\Config(array(
+		    'database' => array(
+		        'adapter'     => 'Mysql',
+		        'host'        => 'yourhost',
+		        'username'    => 'yourusername',
+		        'password'    => 'yourpassword',
+		        'dbname'      => 'cars',
+		        'charset'     => 'utf8',
+		    ),
+		    'application' => array(
+		        'controllersDir' => APP_PATH . '/app/controllers/',
+		        'modelsDir'      => APP_PATH . '/app/models/',
+		        'migrationsDir'  => APP_PATH . '/app/migrations/',
+		        'viewsDir'       => APP_PATH . '/app/views/',
+		        'pluginsDir'     => APP_PATH . '/app/plugins/',
+		        'libraryDir'     => APP_PATH . '/app/library/',
+		        'cacheDir'       => APP_PATH . '/app/cache/',
+		        'baseUri'        => '/',
+		    )
+		));
 	```
 
-	Lastly you will need to run the following to create the stylesheet:
+Lastly you will need to run the following to create the stylesheet:
 
-	```gulp watch```
+```gulp watch```
 
-	Usually there would be a build task that would compile, compress and minify all the assets, but I've not got that far with the project structure for this setup.
+Usually there would be a build task that would compile, compress and minify all the assets, but I've not got that far with the project structure for this setup.
 
 
 ---
