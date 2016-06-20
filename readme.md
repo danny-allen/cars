@@ -4,7 +4,7 @@
 
 ## Contents
 
-* Spec
+* Noteable features
 * Overview
 * Installation
 * Notes
@@ -16,7 +16,7 @@
 ---
 
 
-## Spec
+## Noteable features
 
 * PHP 5.6
 * MySQL
@@ -26,16 +26,17 @@
 * NPM
 * Gulp
 * SASS
+* Font Awesome
 
 ---
 
 ## Overview
 
-Just taking the requirements into account, this task is fairly simple. The complexity lies in the Frameworks and Librarys i've not used before.
+Just taking the requirements into account, this is a fairly simple task. The complexity lies in learning new front end and back end frameworks.
 
-I’ve probably tried to take on too many new things for this project. My usual approach would be SlimPHP, Custom SASS Framework scaffolded out with Yeoman, including bower and npm. I already have this setup ready to work with and would have allowed me to get to the requirements quicker. That said, I’ve tried to learn Vagrant, Phalcon, Foundation and PHPUnit. Much of the time has been spent setting up and familiarising myself with the FED and BED frameworks.
+My usual approach would be Slim, Custom SASS Framework scaffolded out with Yeoman, including bower and npm. I already have this setup and ready to work with. This would have allowed me to progress quicker. That said, I’ve tried to learn Vagrant, Phalcon, Foundation and PHPUnit. Much of the time has been spent setting up and familiarising myself with the FED and BED frameworks.
 
-Since, learning Phalcon and Foundation seemed like a big enough task, I’ve decided to come back to using PHPUnit, should I have the time. I understand TTD and how it really should be done first. However, given the learning curve and time restraints, I feel it necessary to put this to one side for the time being.
+Since, learning Phalcon and Foundation seemed like a big enough task, I decided to leave PHPUnit, and look at using this very shortly after this assignment. I understand TTD and how needs to be done, however, given the learning curve already (and time restraints), I feel it necessary to put this to one side for the time being.
 
 Please visit cars.noise-maker.co.uk for the deployed version of this work.
 
